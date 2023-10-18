@@ -17,7 +17,7 @@ Before you begin, ensure you have met the following requirements:
 A step-by-step guide to get your development environment running.
 
 # Clone the Repository_
-- Copy code: git clone [[[[https://github.com/tomi9186/ReactTestAssignment.git](https://github.com/tomi9186/ReactTestAssignment.git)](https://github.com/tomi9186/ReactTestAssignment.git)](https://github.com/tomi9186/ReactTestAssignment.git)]
+- Copy code: git clone https://github.com/tomi9186/ReactTestAssignment.git
 - Navigate to the Project Directory
 - Install Dependencies: npm install
 - Run: npm start
