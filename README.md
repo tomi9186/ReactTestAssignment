@@ -39,32 +39,41 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+# Built With
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [React](https://reactjs.org/) - The web framework used
+- [Bootstrap](https://getbootstrap.com/) - CSS Framework
+- [LiveCanvas Library](https://library.livecanvas.com/sections/) - CSS Elements for Bootstrap
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Getting Started
 
-### Code Splitting
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Prerequisites
 
-### Analyzing the Bundle Size
+Before you begin, ensure you have met the following requirements:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Node.js and npm: Make sure you have Node.js and npm (Node Package Manager) installed. You can download and install them from nodejs.org.
 
-### Making a Progressive Web App
+# Installing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+A step-by-step guide to get your development environment running.
 
-### Advanced Configuration
+# Clone the Repository\_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Copy code: git clone https://github.com/tomi9186/ReactTestAssignment.git
+- Navigate to the Project Directory
+- Install Dependencies: npm install
+- Run: npm start
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#TIME TRACKING
+Description Duration
+[API] Helper 0:15:00
+[Component] Comments 0:30:00
+[Component] Post 0:15:00
+[Component] Posts 0:15:00
+[GIT] Push & Readme 1:00:00
+[Style] Posts 0:30:00
+Creating Routes 0:15:00
+VS Code - Project Setup 0:00:00
+TOTAL 3:00:00
