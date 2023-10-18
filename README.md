@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [Bootstrap](https://getbootstrap.com/) - CSS Framework
 - [LiveCanvas Library](https://library.livecanvas.com/sections/) - CSS Elements for Bootstrap
 
-#TIME TRACKING
+# TIME TRACKING
 
 - [API] Helper 0:15:00
 - [Component] Comments 0:30:00
