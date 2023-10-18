@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
 
-const Comments = ({ postId }) => {
+const Comments = ({ postId, helloMessage }) => {
   const [comments, setComments] = useState([]);
+  const [helloM, setHellM] = useState(null);
+  const componentName = "Comments";
 
   useEffect(() => {
+    if (!helloM) setHellM(true);
+    if (helloM) console.log(`${helloMessage} ${componentName}`);
     fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
       .then((response) => response.json())
       .then((data) => setComments(data))
       .catch((error) => console.error("Error fetching comments:", error));
-  }, [postId]);
+  }, [postId, helloM, helloMessage]);
 
   return (
     <div>

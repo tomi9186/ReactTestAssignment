@@ -8,8 +8,11 @@ const Posts = ({ helloMessage }) => {
   const [posts, setPosts] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const [helloM, setHellM] = useState(null);
 
   useEffect(() => {
+    if (!helloM) setHellM(true);
+    if (helloM) console.log(`${helloMessage} ${componentName}`);
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((response) => response.json())
       .then((data) => {
@@ -19,7 +22,7 @@ const Posts = ({ helloMessage }) => {
       .catch((error) => {
         console.error("Error fetching posts:", error);
       });
-  }, []);
+  }, [helloMessage, helloM]);
 
   const handleSearch = (text) => {
     const filtered = posts.filter((post) => {
@@ -28,7 +31,7 @@ const Posts = ({ helloMessage }) => {
     setFilteredPosts(filtered);
     setSearchText(text);
   };
-  console.log(`${helloMessage} ${componentName}`);
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg py-3 navbar-dark bg-dark">
@@ -38,19 +41,7 @@ const Posts = ({ helloMessage }) => {
             React test Assignment
           </a>
 
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#myNavbar2"
-            aria-controls="myNavbar2"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-
-          <div className="lc-block collapse navbar-collapse" id="myNavbar2">
+          <div className="lc-block navbar-collapse" id="myNavbar2">
             <form
               role="search"
               method="get"

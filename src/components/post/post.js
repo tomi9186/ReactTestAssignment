@@ -10,8 +10,11 @@ const Post = ({ helloMessage }) => {
   const { id } = useParams();
   const [post, setPost] = useState(null);
   const [authorName, setAuthorName] = useState("");
+  const [helloM, setHellM] = useState(null);
 
   useEffect(() => {
+    if (!helloM) setHellM(true);
+    if (helloM) console.log(`${helloMessage} ${componentName}`);
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
       .then((response) => response.json())
       .then((data) => {
@@ -27,8 +30,7 @@ const Post = ({ helloMessage }) => {
         console.error("Error fetching post:", error);
         setPost(null);
       });
-  }, [id]);
-  console.log(`${helloMessage} ${componentName}`);
+  }, [id, helloMessage, helloM]);
   return (
     <div>
       <nav className="navbar navbar-expand-lg py-3 navbar-dark bg-dark">
@@ -37,18 +39,6 @@ const Post = ({ helloMessage }) => {
             <img src={logo} alt="Logo" className="logo" />
             React test Assignment
           </a>
-
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#myNavbar2"
-            aria-controls="myNavbar2"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
         </div>
       </nav>
       {post ? (
@@ -62,7 +52,7 @@ const Post = ({ helloMessage }) => {
       )}
       <section id="comments" className="bg-light py-5">
         <div className="container">
-          <Comments postId={post?.id} />{" "}
+          {id && <Comments postId={id} helloMessage={helloMessage} />}
         </div>
       </section>
       <p align="center">

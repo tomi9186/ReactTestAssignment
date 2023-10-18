@@ -5,11 +5,15 @@ import Post from "./components/post/post.js";
 import "./App.css";
 
 function App() {
+  const helloMessage = "Hello from ";
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Posts helloMessage="Hello from" />} />
-        <Route path="/post/:id" element={<Post helloMessage="Hello from" />} />
+        <Route path="/" element={<Posts helloMessage={helloMessage} />} />
+        <Route
+          path="/post/:id"
+          element={<Post helloMessage={helloMessage} />}
+        />
       </Routes>
     </Router>
   );
